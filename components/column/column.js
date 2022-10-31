@@ -14,7 +14,7 @@ const Column = ({ column, i, tasks, toggleModal, styles=ColumnStyles }) => {
 	const handleDeleteClick = () => deleteColumn(column.id);
 
 	return (
-		<Draggable draggableId={column.id} index={i}>
+		<Draggable draggableId={column.id} key={column.id} index={i}>
 			{(provided) => (
 				<div {...provided.draggableProps} ref={provided.innerRef} className={`${styles.wrapper} ${styles.spacer}`}>
 					<div className={styles.title_wrapper}>

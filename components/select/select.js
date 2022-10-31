@@ -100,6 +100,7 @@ export const SingleSelect = (props) => {
   return (
     <div className="mt-[0.3rem] w-full">
       <Select
+        id={props.id}
         styles={customStyles}
         className="basic-single"
         classNamePrefix="select"
@@ -149,6 +150,7 @@ export const SingleSelectLabeled = (props) => {
   return (
     <div className="mt-[0.3rem] w-full">
       <Select
+        id={props.id}
         styles={customStyles}
         classNamePrefix="select"
         defaultValue={null}
@@ -167,6 +169,7 @@ export const MultiSelect = (props) => {
   return(
     <div className="mt-[0.3rem] w-full"> 
       <Select
+        id={props.id}
         styles={customStyles}
         defaultValue={null}
         isMulti

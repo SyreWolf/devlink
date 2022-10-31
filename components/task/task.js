@@ -26,9 +26,9 @@ const Task = ({ id, task, index, column, toggleModal, styles=TaskStyles }) => {
 	};
 
 	return (
-		<Draggable index={index} draggableId={id}>
+		<Draggable index={index} draggableId={id} key={id}>
 			{(provided, snapshot) => (
-				<div ref={provided.innerRef} isDragging={snapshot.isDragging} {...provided.draggableProps} {...provided.dragHandleProps} className={styles.wrapper}>
+				<div ref={provided.innerRef} isDragging={snapshot.isDragging} key={`${id}_${index}`} {...provided.draggableProps} {...provided.dragHandleProps} className={styles.wrapper}>
 					<div onClick={handleClick} className={styles.card_wrapper}>
 						{task.tags.length > 0 &&
 							<div className={styles.tags_wrapper}>

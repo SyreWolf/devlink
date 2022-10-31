@@ -1,6 +1,5 @@
 import UsersDisplay from '../users_display/users_display';
 import Dropdown from '../dropdown/dropdown'
-import { SingleSelect } from "../select/select"
 import { VscTag, VscAdd } from "react-icons/vsc"
 //Import of Board Header Component styles storage
 import { BoardHeaderStyles, tagDropdownValues, columnDropdownValues, usersDropdownValues } from "./board_header.config";

@@ -21,8 +21,8 @@ const Header = ({ styles = headerStyles }) => {
         <div className={styles.navbar_wrapper}>
           <VscBell className={styles.icon} title={`Aventuras`}/>
           <a className={styles.profile_wrapper}>
-            <span className={styles.profile_label}>Hi Michael</span>
-            <Image className={styles.profile_image} src="/michael.jpg" width={40} height={40}/>
+            <span className={styles.profile_label}>Hi Gael</span>
+            <Image className={styles.profile_image} src="/gael.jpg" width={40} height={40}/>
           </a>
         </div>
       </div>

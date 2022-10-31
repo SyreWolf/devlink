@@ -10,19 +10,19 @@ const Dropdown = ({ active, title, values, submit, change, toggle, styles = Drop
     <div className={`${active ? 'opacity-100 right-0 visible' : 'opacity-0 right-[-200px] invisible pointer-events-none'} ${styles.wrapper}`}>
       <div className={styles.title}>{title}</div>
       <div className={styles.elements_wrapper}>
-        {values.map(block => {
+        {values.map((block, i) => {
 
           if(block.type === 'color'){
-            return <input onChange={(event) => change(event, block.change)} type="color" className={`${styles.input} h-10`} value={block.value}/>; 
+            return <input key={i} onChange={(event) => change(event, block.change)} type="color" className={`${styles.input} h-10`} value={block.value}/>; 
           }
 
           if(block.type === 'text'){
-            return <input onChange={(event) => change(event, block.change)} type="text" className={styles.input} value={block.value} placeholder={block.placeholder}/>; 
+            return <input key={i} onChange={(event) => change(event, block.change)} type="text" className={styles.input} value={block.value} placeholder={block.placeholder}/>; 
           }
 
           if(block.type === 'add_text'){
             return (
-              <div className={styles.add_block_wrapper}>
+              <div key={i} className={styles.add_block_wrapper}>
                 <input onChange={(event) => change(event, block.change)} type="text" className={styles.input} value={block.value} placeholder={block.placeholder}/>
                 <span onClick={() => submit(block.submit)} className={styles.add_button}><VscAdd/></span>
               </div>
@@ -31,7 +31,7 @@ const Dropdown = ({ active, title, values, submit, change, toggle, styles = Drop
 
           if(block.type === 'add_select'){
             return (
-              <div className={styles.add_block_wrapper}>
+              <div key={i} className={styles.add_block_wrapper}>
                 <SingleSelect changeFunc={(event) => change(event, block.change)} value={block.value} data={block.data} />
                 <span onClick={() => submit(block.submit)} className={styles.add_button}><VscAdd/></span>
               </div>
@@ -41,7 +41,7 @@ const Dropdown = ({ active, title, values, submit, change, toggle, styles = Drop
           if(block.type === 'delete_list'){
             return (
               Object.keys(block.data).length > 0 && (
-                <ul className={styles.list_wrapper}>
+                <ul key={i} className={styles.list_wrapper}>
                   {Object.keys(block.data).map((elem, index) => {
                     return (
                       <li key={index} className={styles.list_elem}>
@@ -59,7 +59,7 @@ const Dropdown = ({ active, title, values, submit, change, toggle, styles = Drop
 
           if(block.type === 'buttons'){
             return (
-              <div className={styles.buttons_wrapper}>
+              <div key={i} className={styles.buttons_wrapper}>
                 <button onClick={() => submit(block.submit)} className={styles.button}>Confirm</button>
                 <button onClick={() => toggle(block.toggle)} className={styles.button}>Cancel</button>
               </div>

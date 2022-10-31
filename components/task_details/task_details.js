@@ -35,7 +35,7 @@ const TaskDetails = ({ toggleModal, taskId, columnId, task, styles=TaskDetailsSt
             <h3 className={`${styles.text_title} ${styles.text_gray}`}>{task.content}</h3>
             <div className={styles.details_wrapper}>
               <span className={`${styles.text_basis} ${styles.text_darkgray}`}>
-                in column "{data.columns[columnId].title}"
+                in column &quot;{data.columns[columnId].title}&quot;
               </span>
               {task.deadline !== '' && <div className={styles.date_wrapper}>
                 <div className={styles.date_inner_wrapper}>
@@ -63,7 +63,7 @@ const TaskDetails = ({ toggleModal, taskId, columnId, task, styles=TaskDetailsSt
                 Description
               </span>
               <span className={`${styles.text_darkgray} ${styles.text_normal}`}>
-                {task.description === '' ? 'No descripción for the moment' : task.description}
+                {task.description === '' ? 'No description for the moment' : task.description}
               </span>
             </div>
             <div className={styles.info_section_wrapper}>

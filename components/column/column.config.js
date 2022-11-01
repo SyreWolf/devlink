@@ -1,6 +1,6 @@
 //This constant stores the styles of all the elements of the Column Component
 export const ColumnStyles = {
-  wrapper: 'flex flex-col h-fit w-fit mt-5 gap-y-2 relative mb-7 border-2 border-[#404144] p-4 rounded-md',
+  wrapper: 'flex flex-col h-fit w-fit mt-5 gap-y-2 relative mb-7 border-2 border-[#404144] p-4 rounded-md animate__animated animate__bounce animate__fadeIn delay-3',
   title_wrapper: 'flex flex-row w-full justify-between items-center px-2 mt-2 relative',
   spacer: 'mr-6',
   inner_wrapper: 'px-2 mt-5 h-[40rem] flex flex-col column-scroll overflow-y-scroll scroll-smooth transition-colors w-[280px]',

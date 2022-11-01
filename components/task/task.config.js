@@ -1,6 +1,6 @@
 //This constant stores the styles of all the elements of the Task Component
 export const TaskStyles = {
-  wrapper: 'relative bg-[#404145] rounded-md w-full mb-3',
+  wrapper: 'relative bg-[#404145] rounded-md w-full mb-3 animate__animated animate__bounce animate__fadeIn delay-4',
   card_wrapper: 'flex items-start flex-col gap-y-1 relative cursor-pointer py-3 px-5 z-10 shadow-sm',
   title: 'font-normal text-sm text-justify tracking-wider mt-1 text-[#ededf2]',
   description: 'font-light text-xs text-justify tracking-wider my-2 text-[#ededf2]',

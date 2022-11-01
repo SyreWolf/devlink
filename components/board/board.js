@@ -9,7 +9,7 @@ const Board = ({ data, onDragEnd, selectedTag, search, toggleModal }) => {
           <div 
             {...provided.droppableProps}
             ref={provided.innerRef}
-            className="flex flex-row justify-start items-start overflow-x-auto scroll-smooth mx-8"
+            className="flex flex-row justify-start items-start overflow-x-auto scroll-smooth mx-8 animate__animated animate__bounce animate__fadeIn delay-2"
           >
             {data.columnOrder.map((columnId, index) => {
               const column = data.columns[columnId];

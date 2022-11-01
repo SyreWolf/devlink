@@ -95,3 +95,17 @@ input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+
+.delay-1 {
+  animation-delay: .25s;
+}
+.delay-2 {
+  animation-delay: .5s;
+}
+.delay-3 {
+  animation-delay: .75s;
+}
+.delay-4 {
+  animation-delay: 1s;
+}

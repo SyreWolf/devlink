@@ -1,6 +1,6 @@
 //This constant stores the styles of all the elements of the navbar and footer
 export const headerStyles = {
-  wrapper: 'w-full h-fit px-12 py-6 mb-6',
+  wrapper: 'w-full h-fit px-12 py-6 mb-6 animate__animated animate__bounce animate__fadeIn',
   logo: 'mt-2',
   search_box: 'bg-transparent rounded-md border-2 border-[#404144] text-[#ededf2] text-sm font-light py-2 px-4 outline-none w-[400px]',
   logo_wrapper: 'flex flex-row items-center justify-start gap-x-32',
